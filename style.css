@@ -1,8 +1,8 @@
 body {
-    background-color: #189bcc;
+    background-color: #f0f0f0;
 }
 
-#1Header {
+h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
