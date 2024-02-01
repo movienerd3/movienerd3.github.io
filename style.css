@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #dadada;
 }
 
 h1 {
@@ -10,9 +10,12 @@ h1 {
 #mainparagraph {
     width: auto;
     border: 15px #6e6e6e;
+    border-style: solid;
     padding: 50px;
     margin: 20px;
     text-align: center;
+    background-color: #c5c5c5;
+    border-radius: 25px;
 }
 
 #paragraphtext {
