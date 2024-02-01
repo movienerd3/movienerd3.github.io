@@ -6,3 +6,10 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
+
+#mainparagraph {
+    width: auto;
+    border: 15px #6e6e6e;
+    padding: 50px;
+    margin: 20px;
+}
