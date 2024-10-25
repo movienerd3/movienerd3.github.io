@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons - Jack Black's Black Jack Wack Sack</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="flex-container center header">
+        Jack Black's Black Jack Wack Sack
+    </div>
+    <hr>
+    <div class="flex-container center main-div" id="main-div">
+        <img src="src/blackjack.jpg" class="center img hidden" id="mainimg"> <br>
+        <div class="center text hidden" id="countText">
+            Cards remaining in deck: 52
+            <img class="right icon img">
+        </div>
+        <div class="center text wbg" id="rules">
+            Welcome to Jack Black's Black Jack Wack Sack, where you will learn how to card count. Here are the rules, when a card appears on screen click the button which corresponds with the card's value. For an extra challenge, keep count in your head and see if it lines up with your score. <br>
+            2 - 6: Add 1 <br>
+            7 - 9: Add / Remove Nothing <br>
+            10, Ace, Jack, Queen, and King: Remove 1 <br> 
+        </div> <br>
+        <button class="center button texB" id="startButton">Click to Start</button>
+        <br>
+        <div class="flex-container center sub-div hidden" id="button-div">
+            <button class="center button numB" id="button1">-1</button>
+            <div class="divider"></div>
+            <button class="center button numB" id="button2">0</button>
+            <div class="divider"></div>
+            <button class="center button numB" id="button3">+1</button>
+        </div>
+        <div class="text" id="endText"></div>
+        <div class="flex-container center sub-div hidden" id="restart-div">
+            <button class="center button texB" id="restartButton">Click to Restart</button>
+        </div>
+    </div>
+    
+    <script lang="JavaScript" src="js/app.js"></script>
+</body>
+</html>
