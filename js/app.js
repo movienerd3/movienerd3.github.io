@@ -85,7 +85,7 @@ function compCalc() {
     } else if(value == 10 || value == 'jack' || value == 'queen' || value == 'king' || value == 'ace') {
         compCount = compCount - 1;
     }
-    console.log(compCount + ' ' + index)
+    console.log(compCount + ' ' + userCount + '' + value)
     if (userCount == compCount) {
         percent += 1;
     }
@@ -128,7 +128,6 @@ function minus1() {
 
 function cardRemove() {
     cards.splice(index, 1)
-    console.log(cards)
     max = max - 1
     cardText.innerHTML = 'Cards remaining in deck: ' + cards.length;
 }
