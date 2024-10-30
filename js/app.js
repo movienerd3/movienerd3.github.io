@@ -49,14 +49,14 @@ function setup() {
     }
     compCount = 0;
     userCount = 0;
-    buttonDiv.style.animation = 'reveal 15s';
+    buttonDiv.style.animation = 'reveal 3s';
     buttonDiv.style.visibility = 'visible';
-    imgContainer.style.animation = 'reveal 15s';
+    imgContainer.style.animation = 'reveal 3s';
     imgContainer.style.visibility = 'visible';
-    cardText.style.animation = 'reveal 15s';
+    cardText.style.animation = 'reveal 3s';
     cardText.style.visibility = 'visible';
     startButton.style.display = 'none';
-    restartDiv.style.animation = 'hide 15s';
+    restartDiv.style.animation = 'hide 3s';
     restartDiv.style.visibility = 'hidden';
     endText.innerHTML = '';
     rules.style.display = 'none';
@@ -138,13 +138,13 @@ function end() {
     var text = 'You got ended up with ' + userCount + '.<br>You had an accuracy of %' + accuracy;
     endText.innerHTML = text;
     console.log(text, (percent / 52))
-    buttonDiv.style.animation = 'hide 15s';
+    buttonDiv.style.animation = 'hide 3s';
     buttonDiv.style.visibility = 'hidden';
-    imgContainer.style.animation = 'hide 15s';
+    imgContainer.style.animation = 'hide 3s';
     imgContainer.style.visibility = 'hidden';
-    cardText.style.animation = 'hide 15s';
+    cardText.style.animation = 'hide 3s';
     cardText.style.visibility = 'hidden';
-    restartDiv.style.animation = 'reveal 15s';
+    restartDiv.style.animation = 'reveal 3s';
     restartDiv.style.visibility = 'visible';
 
 }
