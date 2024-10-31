@@ -31,8 +31,8 @@ const cards = [];  // Where the cards are stored
 const suits = ['club', 'spade', 'diamond', 'heart'] // The suits for the cards
 
 function setup() {
-    cards.length = 0;
-    max = 51;
+    cards.length = 0;  // Reset the deck
+    max = 51; // Reset the max for random number
     // Loop over suits
     for (var i = 0; i < 4; i++) {
         // Determine suit by index
@@ -42,14 +42,15 @@ function setup() {
             // Ensure the card is correctly pushed with proper object creation
             cards.push(new Card(x, suits[i]));
         }
-        cards.push(new Card('jack', suits[i]));
-        cards.push(new Card('queen', suits[i]));
-        cards.push(new Card('king', suits[i]));
-        cards.push(new Card('ace', suits[i]));
+        cards.push(new Card('jack', suits[i])); // Add a jack of suit
+        cards.push(new Card('queen', suits[i])); // Add a queen of suit
+        cards.push(new Card('king', suits[i])); // Add a king of suit
+        cards.push(new Card('ace', suits[i])); // Add a ace of suit
     }
-    compCount = 0;
-    userCount = 0;
-    percent = 0;
+    compCount = 0; // The count of the computer
+    userCount = 0; // The count of the user
+    percent = 0; // How many counts the user got correct
+    // The following is CSS for making stuff visible and invisible
     buttonDiv.style.animation = 'reveal 3s';
     buttonDiv.style.visibility = 'visible';
     imgContainer.style.animation = 'reveal 3s';
@@ -62,7 +63,7 @@ function setup() {
     endText.innerHTML = '';
     rules.style.display = 'none';
     cardText.innerHTML = 'Cards remaining in deck: 52'
-    randCard()
+    randCard()  // Set the picture for the first card
 }
 
 function randNum(min, max) {
@@ -70,11 +71,10 @@ function randNum(min, max) {
 }
 
 function randCard() {
-    index = randNum(0, max)
-    var name = cards[index].value + '' + cards[index].suit;
-    var path = "src/" + name + ".svg"
-    imgContainer.src = path;
-    
+    index = randNum(0, max) // Choose a random number between 0 and the number of cards left
+    var name = cards[index].value + '' + cards[index].suit; // File Name of card chosen
+    var path = "src/" + name + ".svg" // Path of card chosen
+    imgContainer.src = path; // Sets the image to the card chosen
 }
 
 function compCalc() {
@@ -134,10 +134,11 @@ function cardRemove() {
 }
 
 function end() {
-    var accuracy = Math.round((percent / 52 * 100) * 100) / 100;
-    var text = 'You got ended up with ' + userCount + '.<br>You had an accuracy of ' + accuracy + '%';
-    endText.innerHTML = text;
-    console.log(text, (percent / 52))
+    var accuracy = Math.round((percent / 52 * 100) * 100) / 100; // Divde the correct number by 52 then convert to percent
+    var text = 'You got ended up with ' + userCount + '.<br>You had an accuracy of ' + accuracy + '%'; // String for end screen text
+    endText.innerHTML = text; // Display end screen text
+    console.log(text, (percent / 52)) // Debugging
+    // The following is CSS for hiding the game screens and showing the end screen
     buttonDiv.style.animation = 'hide 3s';
     buttonDiv.style.visibility = 'hidden';
     imgContainer.style.animation = 'hide 3s';
