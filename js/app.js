@@ -49,6 +49,7 @@ function setup() {
     }
     compCount = 0;
     userCount = 0;
+    percent = 0;
     buttonDiv.style.animation = 'reveal 3s';
     buttonDiv.style.visibility = 'visible';
     imgContainer.style.animation = 'reveal 3s';
@@ -78,14 +79,14 @@ function randCard() {
 
 function compCalc() {
     value = cards[index].value;
-    if (value > 0 && value <= 6) {
+    if (value > 1 && value <= 6) {
         compCount += 1;
     } else if(value > 6 && value <= 9) {
         compCount += 0;
     } else if(value == 10 || value == 'jack' || value == 'queen' || value == 'king' || value == 'ace') {
         compCount = compCount - 1;
     }
-    console.log(compCount + ' ' + userCount + '' + value)
+    console.log(compCount + ' ' + userCount + ' ' + value + ' ' + cards[index].value)
     if (userCount == compCount) {
         percent += 1;
     }
@@ -98,8 +99,8 @@ function plus1() {
     } else {
         userCount += 1;
         compCalc();
-        randCard();
         cardRemove();
+        randCard();
     }
     
 }
@@ -109,8 +110,8 @@ function zero() {
         end()
     } else {
         compCalc();
-        randCard();
         cardRemove();
+        randCard();
     }
 }
 
@@ -120,8 +121,8 @@ function minus1() {
     } else {
         userCount = userCount - 1;
         compCalc();
-        randCard();
         cardRemove();
+        randCard();
     }
     
 }
@@ -134,7 +135,7 @@ function cardRemove() {
 
 function end() {
     var accuracy = Math.round((percent / 52 * 100) * 100) / 100;
-    var text = 'You got ended up with ' + userCount + '.<br>You had an accuracy of %' + accuracy;
+    var text = 'You got ended up with ' + userCount + '.<br>You had an accuracy of ' + accuracy + '%';
     endText.innerHTML = text;
     console.log(text, (percent / 52))
     buttonDiv.style.animation = 'hide 3s';
