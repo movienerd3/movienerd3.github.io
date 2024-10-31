@@ -97,8 +97,8 @@ function plus1() {
         end()
     } else {
         userCount += 1;
-        randCard();
         compCalc();
+        randCard();
         cardRemove();
     }
     
@@ -108,8 +108,8 @@ function zero() {
     if(cards.length == 0) {
         end()
     } else {
-        randCard();
         compCalc();
+        randCard();
         cardRemove();
     }
 }
@@ -119,8 +119,8 @@ function minus1() {
         end()
     } else {
         userCount = userCount - 1;
-        randCard();
         compCalc();
+        randCard();
         cardRemove();
     }
     
